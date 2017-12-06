@@ -15,9 +15,9 @@
                 float: left;
                 color: #f2f2f2;
                 text-align: center;
-                padding: 14px 16px;
+                padding: 2% 2%;
                 text-decoration: none;
-                font-size: 17px;
+                font-size: 17%;
             }
             .topnav a:hover {
                 background-color: #ddd;
@@ -27,12 +27,18 @@
                 background-color: #4CAF50;
                 color: white;
             }
+            legend{
+                padding: 5.2% 2%;
+            }
             strong {color: white;}
             table, th, td {
-                color: #ddd;
-                border-style: solid;
-                border-width: thin;
-                width: 850px;
+
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 5px;
+                color: white;
             }
         </style>
     </head>
@@ -40,12 +46,11 @@
         <h1>Bolsa</h1>
 
         <form  class="topnav">
-            <a class="active" href="nova">Nova Bolsa</a>
+            <a class="active" href="nova" style="font-size: 100%">Nova Bolsa</a>
 
             <fieldset>
-       <!-- <div><img height="30" src="${bolsa.material}.jpg"></div> -->
-                <legend><a href="listar"><h2>Registro</h2></a></legend>
-                <table>
+                <legend><a href="listar" style="font-size: 130%">Registro</a></legend>
+                <table style="width:100%">
                     <tr>
                         <th>Marca</th>
                         <th>Cor</th>
@@ -60,22 +65,7 @@
                         <td>${bolsa.tiposBolsa}</td>
                         <td>${bolsa.material}</td>
                     </tr>
-
                 </table>
-                <!-- <div>Marca: <br>
-                ${bolsa.marca} </div>
-            <div>Cor: <br>
-                ${bolsa.cor}
-            </div>
-            <div>Tamanho: <br>
-                ${bolsa.tamanho}
-            </div>
-            <div>Tipo de bolsa: <br>
-                <i>${bolsa.tiposBolsa}</i>
-            </div>
-            <div>Material: <br>
-                ${bolsa.material}</div> 
-                -->
             </fieldset>
         </form>
     </bod

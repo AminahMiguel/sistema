@@ -16,9 +16,9 @@
                 float: left;
                 color: #f2f2f2;
                 text-align: center;
-                padding: 14px 16px;
+                padding: 4% 2%;
                 text-decoration: none;
-                font-size: 17px;
+                font-size: 7%;
             }
             .topnav a:hover {
                 background-color: #ddd;
@@ -30,27 +30,29 @@
             }
             strong {color: white;}
             table, th, td {
-                color: #ddd;
-                border-style: solid;
-                border-width: thin;
-                width: 50%;
+
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 5px;
             }
         </style>
     </head>
     <body>
         <h1>Bolsas Registradas</h1>
+
+        <c:if test="${empty lista}">
+            <div>Nenhuma bolsa foi encontrada, clique 
+                <a href="nova">aqui</a>  
+                para registrar uma</div>
+            </c:if>
         <form  class="topnav">
-
-            <c:if test="${empty lista}">
-                <div>Nenhuma bolsa foi encontrada, clique 
-                    <a href="nova">aqui</a>  
-                    para registrar uma</div>
-                </c:if>
-
             <c:if test="${not empty lista}">
                 <fieldset>
-                    <legend><a class="active" href="nova"><h3>Nova Bolsa</h3></a></legend>
-                    <table>
+                    <legend><a class="active" href="nova" style="font-size: 130%">Nova Bolsa</a></legend>
+                   <br>
+                    <table style="width:70%">
                         <tr>
                             <th><strong> Marca </strong></th>
                             <th><strong>Material</strong></th>
@@ -59,10 +61,9 @@
                             <tr>
                                 <td>${r.marca}</td>
                                 <td>${r.material}</td>
-
-                                <td><a href="excluir?codigo=${r.codigo}">excluir</a></td>
-                                <td><a href="editar?codigo=${r.codigo}">editar</a></td>
-                                <td><a href="consultar?codigo=${r.codigo}">consultar</a></td>
+                                <td><a href="excluir?codigo=${r.codigo}" style="font-size: 100%">excluir</a></td>
+                                <td><a href="editar?codigo=${r.codigo}" style="font-size: 100%">editar</a></td>
+                                <td><a href="consultar?codigo=${r.codigo}" style="font-size: 100%">consultar</a></td>
                             </tr>
                         </c:forEach>
                     </table>

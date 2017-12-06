@@ -15,9 +15,9 @@
                 float: left;
                 color: #f2f2f2;
                 text-align: center;
-                padding: 14px 16px;
+                padding: 2% 4%;
                 text-decoration: none;
-                font-size: 17px;
+                font-size: 17%;
             }
             .topnav a:hover {
                 background-color: #ddd;
@@ -28,19 +28,25 @@
                 color: white;
             }
             strong {color: white;}
+            
+            legend{
+                padding: 5% 2%;
+            }
         </style>
     </head>
     <body>
         <h1>Sistema de Bolsas</h1>
 
         <form action="salvar" class="topnav">
-            <a class="active" href="index.html">Home</a>
+            <a class="active" href="index.html" style="font-size: 100%">Home</a>
             <fieldset>
-                <legend><a href="listar"><h2>Registro</h2></a></legend>
-                <img src="bolsas.jpg" alt="Bolsas" align="right" style="width:400px;">
-                <img src="Cart.jpg" alt="Girl" align="right" style="width:369px;">
-
+                <legend><a href="listar" style="font-size: 130%">Registro</a></legend>
+                <div>
+                    <img src="bolsas.jpg" alt="Bolsas" align="right" style="width:33%;">
+                    <img src="Cart.jpg" alt="Girl" align="right" style="width:30.40%;">
+                </div>
                 <input type="hidden" name="codigo" value="${bolsa.codigo}" />
+
                 <div><strong>Marca:</strong><br>
                     <input name="marca" value="${bolsa.marca}" size="40" /></div>
                 <br>
@@ -60,10 +66,13 @@
                     </select>
                 </div>
                 <br>
+                <div>
+                    <input style="font-size: 100%" type="submit" value="Salvar" style="align-self:"  />
+                </div>
             </fieldset>
-            <div>
-                <input type="submit" value="Salvar" />
-            </div>
+            <br>
+            <br>
+
         </form>
     </body>
 </html>
